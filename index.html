@@ -2,54 +2,124 @@
 <html>
 <head>
   <title>My University Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px;
-      background: #f7f7f7;
-      color: #222;
-    }
+  <<style>
 
-    header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 40px;
+  color: #222;
+}
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-    .project {
-      background: white;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
 
-    .project img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
+header p {
+  color: #666;
+}
 
-    .project a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 14px;
-      background: #222;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
+.project {
+  position: relative;
 
-    .project a:hover {
-      background: #555;
-    }
-  </style>
+  height: 420px;
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  margin-bottom: 40px;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* dark transparent overlay */
+.project::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.45);
+}
+
+/* white content window */
+.project-content {
+  position: relative;
+
+  background: white;
+
+  width: 70%;
+  max-width: 700px;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+
+  text-align: center;
+}
+
+.project-content h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.project-content p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.project-content a {
+  display: inline-block;
+
+  padding: 14px 22px;
+
+  background: #222;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.project-content a:hover {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px;
+  }
+
+  .project {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .project-content {
+    width: 100%;
+  }
+
+}
+
+</style>
 </head>
 <body>
 

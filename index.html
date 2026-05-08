@@ -1,184 +1,342 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My University Portfolio</title>
-  <<style>
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  margin: 0;
-  padding: 40px;
-  color: #222;
-}
+  <style>
 
-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 40px;
+      color: #222;
+    }
 
-header h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-header p {
-  color: #666;
-}
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
 
-.project {
-  position: relative;
+    header p {
+      font-size: 20px;
+      color: #666;
+    }
 
-  height: 420px;
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
 
-  border-radius: 24px;
-  overflow: hidden;
+    .project {
+      position: relative;
 
-  margin-bottom: 40px;
+      height: 500px;
 
-  background-size: cover;
-  background-position: center;
+      border-radius: 28px;
+      overflow: hidden;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      background-size: cover;
+      background-position: center;
 
-/* dark transparent overlay */
-.project::before {
-  content: "";
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  position: absolute;
-  inset: 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
 
-  background: rgba(0,0,0,0.45);
-}
+    /* Dark overlay */
+    .project::before {
+      content: "";
 
-/* white content window */
-.project-content {
-  position: relative;
+      position: absolute;
+      inset: 0;
 
-  background: white;
+      background: rgba(0,0,0,0.45);
+    }
 
-  width: 70%;
-  max-width: 700px;
+    /* White content card */
+    .project-content {
+      position: relative;
 
-  padding: 35px;
+      width: 70%;
+      max-width: 750px;
 
-  border-radius: 20px;
+      background: rgba(255,255,255,0.95);
 
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      padding: 40px;
 
-  text-align: center;
-}
+      border-radius: 24px;
 
-.project-content h2 {
-  margin-top: 0;
-  font-size: 32px;
-}
+      text-align: center;
 
-.project-content p {
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 25px;
-}
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
 
-.project-content a {
-  display: inline-block;
+      backdrop-filter: blur(3px);
+    }
 
-  padding: 14px 22px;
+    .project-content h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
 
-  background: #222;
-  color: white;
+      font-size: 36px;
+    }
 
-  text-decoration: none;
+    .project-content p {
+      font-size: 18px;
+      line-height: 1.8;
 
-  border-radius: 10px;
+      color: #555;
 
-  transition: 0.3s;
-}
+      margin-bottom: 30px;
+    }
 
-.project-content a:hover {
-  background: #555;
-}
+    .project-content a {
+      display: inline-block;
 
-@media (max-width: 768px) {
+      padding: 14px 24px;
 
-  body {
-    padding: 20px;
-  }
+      background: #222;
+      color: white;
 
-  .project {
-    height: auto;
-    padding: 40px 20px;
-  }
+      text-decoration: none;
 
-  .project-content {
-    width: 100%;
-  }
+      border-radius: 10px;
 
-}
+      font-weight: bold;
 
-</style>
+      transition: 0.3s;
+    }
+
+    .project-content a:hover {
+      background: #555;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+
+      body {
+        padding: 20px;
+      }
+
+      .project {
+        height: auto;
+        padding: 40px 20px;
+      }
+
+      .project-content {
+        width: 100%;
+        padding: 25px;
+      }
+
+      .project-content h2 {
+        font-size: 28px;
+      }
+
+      .project-content p {
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 <body>
 
-<header>
-  <h1>My University Portfolio</h1>
-  <p>A collection of my presentations and academic projects.</p>
-</header>
+  <header>
+    <h1>My University Portfolio</h1>
+    <p>A collection of my presentations and academic projects.</p>
+  </header>
 
-<section class="projects">
+  <section class="projects">
 
-  <div class="AI Agent">
-    <img src="Images/AI_agents.png" alt="Marketing project preview">
-    <h2>AI agents presentation</h2>
-    <p>This presentation introduces an AI-powered chatbot, "Nova", developed by Marketing Creations to optimize customer management and lead conversation within the sales funnel. It explains how the AI agent engages prospects, qualifies leads, and drives appointment bookings through a structured, human-like interaction strategy. Overall, the project demonstrates how automation can enhance efficiency and improve conversion rates in both B2B and B2C marketing contexts.</p>
-    <a href="PDFs/AI_agent.pdf" target="_blank">View PDF</a>
-  </div>
+    <!-- AI AGENTS -->
 
-  <div class="Performance Program">
-    <img src="Images/Performance_Program.png" alt="Business analysis preview">
-    <h2>Performance Program of "Caelum"</h2>
-    <p>This presentation introduces the "Perfomance Program" by Caelum, focused on helping individuals or organizations unlock and scale their full potential. It positions the program as a structured, growth-oriented initiative designed to drive performance improvement and developement. Overall, it conveys a strong value proposition centered on tranformation, ambition, and scalable success.</p>
-    <a href="PDFs/Performance_Program.pdf" target="_blank">View PDF</a>
-  </div>
+    <div class="project"
+      style="background-image: url('Images/AI_agents.png');">
 
-  <div class="Market Research Plan">
-    <img src="images/Market_Research_Plan.png" alt="Research presentation preview">
-    <h2>Market Research Plan for "Keeper"</h2>
-    <p>This presentation outlines a comprehensive market research plan designed to support the launch of the film Keeper in Spain by DeAPlaneta. It combines quantitative and qualitative methods - such as surveys, focus groups, and street interviews - to identify target audiences, refine positioning, and optimize marketing strategies. All in all, the project demonstrates a data-driven, audience-centric approach to improving campaign effectiveness and forecasting performance, supported by structured data collection and budget estimation.</p>
-    <a href="PDFs/Market_Research_Plan.pdf" target="_blank">View PDF</a>
-  </div>  
+      <div class="project-content">
 
-  <div class="Business & Marketing Planning">
-    <img src="images/Business_Marketing_Planning.png" alt="Research presentation preview">
-    <h2>Business & Marketing Planning</h2>
-    <p>This presentation analyzes Sense, an energy monitoring company, through a comprehensive business and marketing framework, including PESTLE, Porter's Five Forces, SWOT, and VRIO analyses. It identifies key challenges such as device detection accuracy, installation complexity, and user engagement, and proposes strategic, data-driven solutions to improve product performance and market expansion. As a result, the project highlights how Sense can leverage AI, partnerships, and user-centric innovations to stregthen its competitive positions in the smart energy market.</p>
-    <a href="pdfs/Business_Marketing_Planning.pdf" target="_blank">View PDF</a>
-  </div>
+        <h2>AI Agents Presentation</h2>
 
-  <div class="Financial Report">
-    <img src="Images/Financial_Report.png" alt="Financial_Report">
-    <h2>Financial Report for United Health</h2>
-    <p>This presentation provides a comprehensive financial analysis of UnitedHealth Group from 2021-2024, highlighting strong revenue growth, resilient operational performance, and strategic expansion through acquisitions despite profitability pressures in 2024 caused by cybersecurity incidents and rising costs. It concludes that while the company faces short-term financial and operational challenges, its robust business model, market dominance, and long-term investment potential remain strong.</p>
-    <a href="PDFs/Financial_Report.pdf" target="_blank">View PDF</a>
-  </div>
+        <p>
+          This presentation introduces an AI-powered chatbot, "Nova",
+          developed by Marketing Creations to optimize customer
+          management and lead conversion within the sales funnel.
+          It demonstrates how AI automation can improve engagement,
+          efficiency, and conversion rates in both B2B and B2C
+          environments.
+        </p>
 
-  <div class="Communication Plan">
-    <img src="Images/Communication_Plan .png" alt="Communication_Plan">
-    <h2>Communication Plan for Plesh Chocolate</h2>
-    <p>This presentation outlines a strategic communication plan for Plesh, focused on building brand awareness, educating consumers on its value proposition, expanding distribution, and strengthening credibility within the growing healthy snack market. through market, competitor, stakeholder, and segmentation analyses, it prositions Plesh as a modern, health-conscious chocolate brand with strong growth potential, while emphasizing the need to improve retail presence and navigate external challenges such as rising cocoa costs and sustainability pressures.</p>
-    <a href="PDFs/Communication_Plan .pdf" target="_blank">View PDF</a>
-  </div>
+        <a href="PDFs/AI_agent.pdf" target="_blank">
+          View PDF
+        </a>
 
-  <div class="Brand Admiration Project">
-    <img src="Images/Brand_Admiration.png" alt="Brand_Admiration">
-    <h2>Brand Admiration Project for Nespresso</h2>
-    <p>As an assignment for a communications strategies class, it was asked from us to deliver a brief presentation about our favourite brand. As a team we chose nespresso and we explored the brands evolution from a coffee product into a premium lifestyle brand. We were asked to make an impact through personal stories and explain the reasons why this coffee brand is special to us. The presenation highlights how Nespresso's convenience, consistency, and wide flavour variety have created strong emotional loyalty.</p>
-    <a href="PDFs/Brand_Admiration.pdf" target="_blank">View PDF</a>
-  </div>
-</section>
+      </div>
+
+    </div>
+
+    <!-- PERFORMANCE PROGRAM -->
+
+    <div class="project"
+      style="background-image: url('Images/Performance_Program.png');">
+
+      <div class="project-content">
+
+        <h2>Performance Program of "Caelum"</h2>
+
+        <p>
+          This presentation introduces the "Performance Program"
+          by Caelum, focused on helping individuals and organizations
+          unlock and scale their full potential through a structured,
+          growth-oriented framework centered on performance and
+          development.
+        </p>
+
+        <a href="PDFs/Performance_Program.pdf" target="_blank">
+          View PDF
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- MARKET RESEARCH -->
+
+    <div class="project"
+      style="background-image: url('Images/Market_Research_Plan.png');">
+
+      <div class="project-content">
+
+        <h2>Market Research Plan for "Keeper"</h2>
+
+        <p>
+          This presentation outlines a comprehensive market research
+          plan supporting the launch of the film Keeper in Spain by
+          DeAPlaneta. It combines qualitative and quantitative research
+          methods to identify target audiences, optimize positioning,
+          and improve campaign effectiveness.
+        </p>
+
+        <a href="PDFs/Market_Research_Plan.pdf" target="_blank">
+          View PDF
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- BUSINESS & MARKETING -->
+
+    <div class="project"
+      style="background-image: url('Images/Business_Marketing_Planning.png');">
+
+      <div class="project-content">
+
+        <h2>Business & Marketing Planning</h2>
+
+        <p>
+          This project analyzes Sense, an energy monitoring company,
+          through frameworks including SWOT, VRIO, PESTLE, and Porter's
+          Five Forces. It proposes strategic and data-driven solutions
+          to improve user engagement, AI performance, and market growth.
+        </p>
+
+        <a href="PDFs/Business_Marketing_Planning.pdf" target="_blank">
+          View PDF
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- FINANCIAL REPORT -->
+
+    <div class="project"
+      style="background-image: url('Images/Financial_Report.png');">
+
+      <div class="project-content">
+
+        <h2>Financial Report for UnitedHealth</h2>
+
+        <p>
+          This presentation provides a financial analysis of
+          UnitedHealth Group between 2021 and 2024, highlighting
+          revenue growth, operational resilience, strategic expansion,
+          and key financial challenges affecting profitability.
+        </p>
+
+        <a href="PDFs/Financial_Report.pdf" target="_blank">
+          View PDF
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- COMMUNICATION PLAN -->
+
+    <div class="project"
+      style="background-image: url('Images/Communication_Plan.png');">
+
+      <div class="project-content">
+
+        <h2>Communication Plan for Plesh Chocolate</h2>
+
+        <p>
+          This presentation outlines a strategic communication plan
+          for Plesh, focused on increasing brand awareness, educating
+          consumers, expanding distribution channels, and strengthening
+          credibility within the healthy snack market.
+        </p>
+
+        <a href="PDFs/Communication_Plan.pdf" target="_blank">
+          View PDF
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- BRAND ADMIRATION -->
+
+    <div class="project"
+      style="background-image: url('Images/Brand_Admiration.png');">
+
+      <div class="project-content">
+
+        <h2>Brand Admiration Project for Nespresso</h2>
+
+        <p>
+          This presentation explores the evolution of Nespresso from
+          a coffee product into a premium lifestyle brand, emphasizing
+          storytelling, emotional branding, customer loyalty, and the
+          personal connection consumers develop with the brand.
+        </p>
+
+        <a href="PDFs/Brand_Admiration.pdf" target="_blank">
+          View PDF
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </body>
+
 </html>

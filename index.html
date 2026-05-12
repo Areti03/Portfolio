@@ -5,333 +5,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My University Portfolio</title>
+  <title>My Portfolio</title>
 
-  <style>
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 40px;
-      color: #222;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
-
-    header p {
-      font-size: 20px;
-      color: #666;
-    }
-
-    .projects {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .project {
-      position: relative;
-
-      height: 500px;
-
-      border-radius: 28px;
-      overflow: hidden;
-
-      background-size: cover;
-      background-position: center;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    }
-
-    /* Dark overlay */
-    .project::before {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      background: rgba(0,0,0,0.45);
-    }
-
-    /* White content card */
-    .project-content {
-      position: relative;
-
-      width: 70%;
-      max-width: 750px;
-
-      background: rgba(255,255,255,0.95);
-
-      padding: 40px;
-
-      border-radius: 24px;
-
-      text-align: center;
-
-      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
-
-      backdrop-filter: blur(3px);
-    }
-
-    .project-content h2 {
-      margin-top: 0;
-      margin-bottom: 20px;
-
-      font-size: 36px;
-    }
-
-    .project-content p {
-      font-size: 18px;
-      line-height: 1.8;
-
-      color: #555;
-
-      margin-bottom: 30px;
-    }
-
-    .project-content a {
-      display: inline-block;
-
-      padding: 14px 24px;
-
-      background: #222;
-      color: white;
-
-      text-decoration: none;
-
-      border-radius: 10px;
-
-      font-weight: bold;
-
-      transition: 0.3s;
-    }
-
-    .project-content a:hover {
-      background: #555;
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 768px) {
-
-      body {
-        padding: 20px;
-      }
-
-      .project {
-        height: auto;
-        padding: 40px 20px;
-      }
-
-      .project-content {
-        width: 100%;
-        padding: 25px;
-      }
-
-      .project-content h2 {
-        font-size: 28px;
-      }
-
-      .project-content p {
-        font-size: 16px;
-      }
-
-    }
-
-  </style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <h1>My University Portfolio</h1>
-    <p>A collection of my presentations and academic projects.</p>
-  </header>
+  <!-- NAVBAR -->
 
-  <section class="projects">
+  <nav class="navbar">
 
-    <!-- AI AGENTS -->
+    <div class="logo">
+      My Portfolio
+    </div>
 
-    <div class="project"
-      style="background-image: url('Images/AI_agents.png');">
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <a href="university.html">University Portfolio</a>
+      <a href="career.html">Career Achievements</a>
+    </div>
 
-      <div class="project-content">
+  </nav>
 
-        <h2>AI Agents Presentation</h2>
+  <!-- HERO SECTION -->
 
-        <p>
-          This presentation introduces an AI-powered chatbot, "Nova",
-          developed by Marketing Creations to optimize customer
-          management and lead conversion within the sales funnel.
-          It demonstrates how AI automation can improve engagement,
-          efficiency, and conversion rates in both B2B and B2C
-          environments.
-        </p>
+  <section class="hero">
 
-        <a href="PDFs/AI_agent.pdf" target="_blank">
-          View PDF
-        </a>
+    <div class="hero-content">
 
-      </div>
+      <h1>Hello, I'm Areti</h1>
+
+      <p>
+        Welcome to my personal portfolio website.
+        Here you can explore my academic work,
+        presentations, projects, and professional achievements.
+      </p>
 
     </div>
 
-    <!-- PERFORMANCE PROGRAM -->
+  </section>
 
-    <div class="project"
-      style="background-image: url('Images/Performance_Program.png');">
+  <!-- ABOUT SECTION -->
 
-      <div class="project-content">
+  <section class="about-section">
 
-        <h2>Performance Program of "Caelum"</h2>
+    <div class="about-card">
 
-        <p>
-          This presentation introduces the "Performance Program"
-          by Caelum, focused on helping individuals and organizations
-          unlock and scale their full potential through a structured,
-          growth-oriented framework centered on performance and
-          development.
-        </p>
+      <h2>About Me</h2>
 
-        <a href="PDFs/Performance_Program.pdf" target="_blank">
-          View PDF
-        </a>
+      <p>
+        I am a university student passionate about
+        marketing, communication strategies,
+        business analysis, and digital innovation.
+      </p>
 
-      </div>
-
-    </div>
-
-    <!-- MARKET RESEARCH -->
-
-    <div class="project"
-      style="background-image: url('Images/Market_Research_Plan.png');">
-
-      <div class="project-content">
-
-        <h2>Market Research Plan for "Keeper"</h2>
-
-        <p>
-          This presentation outlines a comprehensive market research
-          plan supporting the launch of the film Keeper in Spain by
-          DeAPlaneta. It combines qualitative and quantitative research
-          methods to identify target audiences, optimize positioning,
-          and improve campaign effectiveness.
-        </p>
-
-        <a href="PDFs/Market_Research_Plan.pdf" target="_blank">
-          View PDF
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- BUSINESS & MARKETING -->
-
-    <div class="project"
-      style="background-image: url('Images/Business_Marketing_Planning.png');">
-
-      <div class="project-content">
-
-        <h2>Business & Marketing Planning</h2>
-
-        <p>
-          This project analyzes Sense, an energy monitoring company,
-          through frameworks including SWOT, VRIO, PESTLE, and Porter's
-          Five Forces. It proposes strategic and data-driven solutions
-          to improve user engagement, AI performance, and market growth.
-        </p>
-
-        <a href="PDFs/Business_Marketing_Planning.pdf" target="_blank">
-          View PDF
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- FINANCIAL REPORT -->
-
-    <div class="project"
-      style="background-image: url('Images/Financial_Report.png');">
-
-      <div class="project-content">
-
-        <h2>Financial Report for UnitedHealth</h2>
-
-        <p>
-          This presentation provides a financial analysis of
-          UnitedHealth Group between 2021 and 2024, highlighting
-          revenue growth, operational resilience, strategic expansion,
-          and key financial challenges affecting profitability.
-        </p>
-
-        <a href="PDFs/Financial_Report.pdf" target="_blank">
-          View PDF
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- COMMUNICATION PLAN -->
-
-    <div class="project"
-      style="background-image: url('Images/Communication_Plan .png');">
-
-      <div class="project-content">
-
-        <h2>Communication Plan for Plesh Chocolate</h2>
-
-        <p>
-          This presentation outlines a strategic communication plan
-          for Plesh, focused on increasing brand awareness, educating
-          consumers, expanding distribution channels, and strengthening
-          credibility within the healthy snack market.
-        </p>
-
-        <a href="PDFs/Communication_Plan.pdf" target="_blank">
-          View PDF
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- BRAND ADMIRATION -->
-
-    <div class="project"
-      style="background-image: url('Images/Brand_Admiration.png');">
-
-      <div class="project-content">
-
-        <h2>Brand Admiration Project for Nespresso</h2>
-
-        <p>
-          This presentation explores the evolution of Nespresso from
-          a coffee product into a premium lifestyle brand, emphasizing
-          storytelling, emotional branding, customer loyalty, and the
-          personal connection consumers develop with the brand.
-        </p>
-
-        <a href="PDFs/Brand_Admiration.pdf" target="_blank">
-          View PDF
-        </a>
-
-      </div>
+      <p>
+        This portfolio showcases both my academic
+        projects and my professional development.
+      </p>
 
     </div>
 

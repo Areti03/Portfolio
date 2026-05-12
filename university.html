@@ -8,6 +8,150 @@
   <title>University Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 40px;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #666;
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .project {
+      position: relative;
+
+      height: 500px;
+
+      border-radius: 28px;
+      overflow: hidden;
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    /* Dark overlay */
+    .project::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background: rgba(0,0,0,0.45);
+    }
+
+    /* White content card */
+    .project-content {
+      position: relative;
+
+      width: 70%;
+      max-width: 750px;
+
+      background: rgba(255,255,255,0.95);
+
+      padding: 40px;
+
+      border-radius: 24px;
+
+      text-align: center;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+
+      backdrop-filter: blur(3px);
+    }
+
+    .project-content h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      font-size: 36px;
+    }
+
+    .project-content p {
+      font-size: 18px;
+      line-height: 1.8;
+
+      color: #555;
+
+      margin-bottom: 30px;
+    }
+
+    .project-content a {
+      display: inline-block;
+
+      padding: 14px 24px;
+
+      background: #222;
+      color: white;
+
+      text-decoration: none;
+
+      border-radius: 10px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .project-content a:hover {
+      background: #555;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+
+      body {
+        padding: 20px;
+      }
+
+      .project {
+        height: auto;
+        padding: 40px 20px;
+      }
+
+      .project-content {
+        width: 100%;
+        padding: 25px;
+      }
+
+      .project-content h2 {
+        font-size: 28px;
+      }
+
+      .project-content p {
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
